@@ -1,0 +1,24 @@
+{
+  "name": "Nutribot",
+  "version": "1.0.0",
+  "description": "Chatbot nutritionnel, lire les README.md pour plus d'informations.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HugoBelhomme/Nutribot.git"
+  },
+  "author": "Hugo Belhomme",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.8.4",
+    "bson": "^1.0.4",
+    "cron": "^1.2.1",
+    "mongodb": "^2.2.30",
+    "pluralize": "^6.0.0",
+    "restify": "^5.0.0",
+    "uuid": "^3.1.0"
+  }
+}
