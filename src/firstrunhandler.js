@@ -15,7 +15,7 @@ lib.dialog('/', [
                  "to tell me what you eat.");
     session.userData.address = session.message.address;
     session.userData.canBeInterrupted = true;
-    session.userData.isFisrtRun = false;
+    session.userData.isFirstRun = false;
   }
 ]);
 
