@@ -1,14 +1,14 @@
 var builder = require('botbuilder');
 var tools = require('./tools.js');
 var pluralize = require('pluralize');
-
+var config = require('./config.js')
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/testsMongo";
+var url = config.MONGOURL;
 
 var lib = new builder.Library('new_meal');
 
-var LUIS_URL = "YourURLGoesHere";
+var LUIS_URL = config.LUISURL;
 var recognizer = new builder.LuisRecognizer(LUIS_URL);
 
 
