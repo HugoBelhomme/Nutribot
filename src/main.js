@@ -44,7 +44,7 @@ var threshold = 0.6;
 // The bot is created with its default dialog
 var bot = new builder.UniversalBot(connector, [
   function (session) {
-    if (session.userData.isFisrtRun == undefined) {
+    if (session.userData.isFirstRun == undefined) {
       session.beginDialog('firstRun:/');
     }
 
