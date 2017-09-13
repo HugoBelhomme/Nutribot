@@ -1,0 +1,4374 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "sandbox",
+  "name": "chatbot test",
+  "desc": "Sandbox app",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "help"
+    },
+    {
+      "name": "new_meal"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "recap"
+    },
+    {
+      "name": "reminders"
+    },
+    {
+      "name": "usage"
+    }
+  ],
+  "entities": [
+    {
+      "name": "food"
+    },
+    {
+      "name": "meal"
+    },
+    {
+      "name": "quantity"
+    }
+  ],
+  "composites": [
+    {
+      "name": "serving",
+      "children": [
+        "food",
+        "quantity"
+      ]
+    }
+  ],
+  "closedLists": [],
+  "bing_entities": [],
+  "actions": [],
+  "model_features": [
+    {
+      "name": "food",
+      "mode": true,
+      "words": "cereals,meat,beaf,tomato,fruits,onion,garlic,cheese,tomatoes,lettuce,cucumber,onions,spinach,peppers,celery,parsley,mushrooms,carrots,potatoes,cabbage,broccoli,cauliflower,asparagus,peas,eggplant,zucchini,beans,corn,squash,apples,cucumbers,green beans,beets,strawberries,pumpkin,sweet potatoes,kale,artichokes,leeks,brussels sprouts,carrot,avocado,blueberries,rhubarb,turnips,pears,radishes,grapes,parsnips,peaches,radish,watermelon,plums,mango,pineapple,apple,raspberries,pumpkins,banana,papaya,grapefruit,cantaloupe,peach,lemon,kiwi,pear,oranges,cherries,honey,orange,cherry,chocolate,strawberry,coconut,lime,apricot,raspberry,plum,mint,vanilla,coffee,cream,cinnamon,grape,almond,blueberry,caramel,butter,cranberry,pudding,oatmeal,syrup,peanut,yogurt,milk,sugar,buttermilk,walnuts,raisins,muffins,applesauce,almonds,bread,bananas,vinegar,flour,granola,pecans,puree,cranberries,pancakes,quinoa,cashews,apricots,scallions,shallots,vinaigrette,feta,chicken,olives,turkey,seafood,shrimp,pasta,ham,salmon,pepper,salad,wine,sausage,egg,bacon,steak,tofu,duck,beer,lobster,tea,ice cream,pizza,cake,potato,mushroom,cookies,hamburger,sandwiches,burgers,fries,burger,french fries,spaghetti,chips,cheeseburger,hot dogs,hamburgers,nachos,wings,tacos,cheeseburgers,ribs,potato salad,onion rings,chicken wings,apple pie,lasagna,beef stew,beef,veal,meatballs,meatloaf,ravioli,scallops,tuna,crab,mussels,mozzarella,clams,basil,sausages,prosciutto,pork chops,anchovies,chorizo,oysters,tomato sauce,sardines,lentils,pepperoni,salami,ground beef,pickles,corned beef,liver,green peppers,chicken breast,roast beef,sweet potato,mashed potato,roastbeef,rice,eggs,pork,noodles,oats,soybeans,breads,cereal,lamb,goat,venison,sheep,goats,boar,horse,cattle,cow,pig,pigs,deer,herd,chickens,turkeys,rabbits,ducks",
+      "activated": true
+    },
+    {
+      "name": "quantity",
+      "mode": true,
+      "words": "tbsp,tsp,g,grams,bowl,cup,spoon,plate,tablespoon",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "how are you ?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "yo",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "test",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "pizza",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "ok",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "help",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "cool",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "2",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "show me my reminders",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "i just ate an apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 14,
+          "endPos": 18
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 12
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "hey",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "yes",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 4
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "i need help",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "no",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "help me",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "i am lost",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "sos",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "k",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what is this",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "nice to meet you",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "can you help me",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "menu",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "76",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what can i do ?",
+      "intent": "usage",
+      "entities": []
+    },
+    {
+      "text": "lunch",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "not now",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how does this work",
+      "intent": "usage",
+      "entities": []
+    },
+    {
+      "text": "y",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "recap",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "ham",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "an apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 3,
+          "endPos": 7
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "breakfast",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "diner",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "snack",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "helo",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "can you help me ?",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "i don't know what to do",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "reminder",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "i ate an apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 9,
+          "endPos": 13
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 7
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "next day",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "reminders",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "hello chatbot",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "usage",
+      "intent": "usage",
+      "entities": []
+    },
+    {
+      "text": "heeeey",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "thanks !",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "lae",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hey !",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what is this ?",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "i just ate a burger",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 13,
+          "endPos": 18
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "what do you do ?",
+      "intent": "usage",
+      "entities": []
+    },
+    {
+      "text": "delete my data",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "give me a summary",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "is this working ?",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "eys",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "cc",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "in 2 hours",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "set a reminder",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "ayyy",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "eating",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "change reminders",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "i ate an apple for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 9,
+          "endPos": 13
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 7
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 13
+        },
+        {
+          "entity": "meal",
+          "startPos": 19,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "pastas",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "22:00",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hugo",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "show meals",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "show me the analysis",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "how do you work ?",
+      "intent": "usage",
+      "entities": []
+    },
+    {
+      "text": "2 pizzas",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 2,
+          "endPos": 7
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "remind me to go shopping",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "i ate 2 apples",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 13
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "74",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "75",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how does this work ?",
+      "intent": "usage",
+      "entities": []
+    },
+    {
+      "text": "show usage",
+      "intent": "usage",
+      "entities": []
+    },
+    {
+      "text": "i just ate 2 apples",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 13,
+          "endPos": 18
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "analysis",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "a piece of cake",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "i just ate",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "11:34",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "my stats",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "heeeeello",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i ate ham",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 8
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "set reminders",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "hey, how are you ?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "mark all email messages as read",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "\"call eddy george , wait cancel\"",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how do i change the phone number for jack ?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "cereal",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "i just ate pizza",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "i just had pasta",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "what are my mementos ?",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "show memos",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "what did you find about what i ate ?",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "review my meals",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "can i see my recap ?",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "new meal",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "i just ate chiken",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 16
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "10h16",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10h41",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "jour",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "wesh alors",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add meal pizza",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 9,
+          "endPos": 13
+        },
+        {
+          "entity": "serving",
+          "startPos": 9,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "i just ate a sandwitch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 13,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "ééyop",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "bonjour nutribot",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i just ateanapple",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "20yo",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "can you show me my reminders ?",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "where do i register my meals ?",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "i would like to register my lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "meal",
+          "startPos": 28,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "i had a fish and chips for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "food",
+          "startPos": 17,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 17,
+          "endPos": 21
+        },
+        {
+          "entity": "meal",
+          "startPos": 27,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "my lunch : a sandwitch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 13,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 21
+        },
+        {
+          "entity": "meal",
+          "startPos": 3,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "here is what i ate for breakfast",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "meal",
+          "startPos": 23,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "just had diner",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "meal",
+          "startPos": 9,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "show analysis",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "what is possible to do ?",
+      "intent": "usage",
+      "entities": []
+    },
+    {
+      "text": "what are your possibilities ?",
+      "intent": "usage",
+      "entities": []
+    },
+    {
+      "text": "i had soup tonight",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "i want to manage my reminders",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "manage mementos",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "i want to check my reminders",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "i just ate an appl",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 14,
+          "endPos": 17
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 12
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "tmp",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "can you show me the menu please ?",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "i ate a apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 12
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "i ate food with food",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 19
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 16,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "i had apple for breasfast",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "meal",
+          "startPos": 16,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "meal: a food",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 11
+        },
+        {
+          "entity": "meal",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "lunch: an apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 10,
+          "endPos": 14
+        },
+        {
+          "entity": "quantity",
+          "startPos": 7,
+          "endPos": 8
+        },
+        {
+          "entity": "serving",
+          "startPos": 7,
+          "endPos": 14
+        },
+        {
+          "entity": "meal",
+          "startPos": 0,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "i ate ground beef with carrots for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 16
+        },
+        {
+          "entity": "food",
+          "startPos": 23,
+          "endPos": 29
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 16
+        },
+        {
+          "entity": "serving",
+          "startPos": 23,
+          "endPos": 29
+        },
+        {
+          "entity": "meal",
+          "startPos": 35,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "i ate ground beef with carrots",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 16
+        },
+        {
+          "entity": "food",
+          "startPos": 23,
+          "endPos": 29
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 16
+        },
+        {
+          "entity": "serving",
+          "startPos": 23,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "9h43",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "params",
+      "intent": "help",
+      "entities": []
+    },
+    {
+      "text": "i ate a pie for breakfast",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 10
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "meal",
+          "startPos": 16,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "i had a pie for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 10
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "meal",
+          "startPos": 16,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "i need to add a meal",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "i ate an applepie",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 9,
+          "endPos": 16
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 7
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "i ate pie and apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 8
+        },
+        {
+          "entity": "food",
+          "startPos": 14,
+          "endPos": 18
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 8
+        },
+        {
+          "entity": "serving",
+          "startPos": 14,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "i had pizzas for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 11
+        },
+        {
+          "entity": "meal",
+          "startPos": 17,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "breakfast: an apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 14,
+          "endPos": 18
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 12
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 18
+        },
+        {
+          "entity": "meal",
+          "startPos": 0,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "what if i want to see my reminders ?",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "i just ate a banana",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 13,
+          "endPos": 18
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "hamazfvq",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hey i just ate smth for smth",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 15,
+          "endPos": 18
+        },
+        {
+          "entity": "serving",
+          "startPos": 15,
+          "endPos": 18
+        },
+        {
+          "entity": "meal",
+          "startPos": 24,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "hey i just ate, what is next ?",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "newmeal",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "ceci est un exercie",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10:41",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "set a new reminder",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "11:47",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "monday 12:01",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "my meals",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "how do i add a meal",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "13:59",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "meeh",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "14h19",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "11:50",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "update test 2",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "jajajajajajaja",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "11:13",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hello lordw",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "jaaaj",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "11:38",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "can i had a meal ?",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "reeeeeeeeee",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "can i had a new meal ?",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "i'd like to add a new meal",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "10:01",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "sample tect",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "ham, potatoes with ketchup",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hello dlrow",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "bread, lettuce and tomato",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "qh",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "remindes",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "this is a tfgaaaaaaaaaaaaest",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "this aeqr",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "dille",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "tell what i ate today",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "13:54",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "remindesr",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "can i add a meal ?",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "i see what you did there",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "sample s reminders",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "update test 3",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10:58",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "est-ce que Ça fonctionne ?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i ate ham for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 8
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 8
+        },
+        {
+          "entity": "meal",
+          "startPos": 14,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "i just had an applepie for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 14,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 12
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 21
+        },
+        {
+          "entity": "meal",
+          "startPos": 27,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "can i add a new meal ?",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "recap ?",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "i just ate ham for breakfast",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 13
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 13
+        },
+        {
+          "entity": "meal",
+          "startPos": 19,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "sample reminders",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "i ate soup for diner",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "meal",
+          "startPos": 15,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "some fruits and bread",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 5,
+          "endPos": 10
+        },
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 20
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "serving",
+          "startPos": 16,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "i want to add a meal",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "some pizza",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 5,
+          "endPos": 9
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "i just had an applepie for diner",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 14,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 12
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 21
+        },
+        {
+          "entity": "meal",
+          "startPos": 27,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "i just ate a banana for snack",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 13,
+          "endPos": 18
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 18
+        },
+        {
+          "entity": "meal",
+          "startPos": 24,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "can i see my reminders ?",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "i just had an apple pie for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 14,
+          "endPos": 22
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 12
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 22
+        },
+        {
+          "entity": "meal",
+          "startPos": 28,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "i just ate a new meal",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "pizza and sausage",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 4
+        },
+        {
+          "entity": "food",
+          "startPos": 10,
+          "endPos": 16
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 4
+        },
+        {
+          "entity": "serving",
+          "startPos": 10,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "add meal",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "bread and jam",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 4
+        },
+        {
+          "entity": "food",
+          "startPos": 10,
+          "endPos": 12
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 4
+        },
+        {
+          "entity": "serving",
+          "startPos": 10,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "display meals",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "show meal",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "display meal",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "i want to set a new reminder",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "i ate some food with food",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 24
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 21,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "i had a food with food",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "food",
+          "startPos": 18,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 18,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "i just ate food with some food",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "food",
+          "startPos": 26,
+          "endPos": 29
+        },
+        {
+          "entity": "quantity",
+          "startPos": 21,
+          "endPos": 24
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 21,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "ééééé",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "bread with some nutella",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 4
+        },
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 22
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 4
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "i just ate a chewing gum",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 13,
+          "endPos": 19
+        },
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 23
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "i just ate pizza pizza and pizza for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "food",
+          "startPos": 17,
+          "endPos": 21
+        },
+        {
+          "entity": "food",
+          "startPos": 27,
+          "endPos": 31
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 17,
+          "endPos": 21
+        },
+        {
+          "entity": "serving",
+          "startPos": 27,
+          "endPos": 31
+        },
+        {
+          "entity": "meal",
+          "startPos": 37,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "i just ate bread for breakfast",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "meal",
+          "startPos": 21,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "a bowl of cereals",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 10,
+          "endPos": 16
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "i just ate bread with some nutella",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "food",
+          "startPos": 27,
+          "endPos": 33
+        },
+        {
+          "entity": "quantity",
+          "startPos": 22,
+          "endPos": 25
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 22,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "i ate a steak for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 12
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 12
+        },
+        {
+          "entity": "meal",
+          "startPos": 18,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "can i see the analysis ?",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "a cup of tea",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 9,
+          "endPos": 11
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 4
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "i just ate brea",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "can i see the analysis please ?",
+      "intent": "recap",
+      "entities": []
+    },
+    {
+      "text": "see reminders",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "you have to eat !",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i ate a bowl of cereals and 2 bananas",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 22
+        },
+        {
+          "entity": "food",
+          "startPos": 30,
+          "endPos": 36
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 11
+        },
+        {
+          "entity": "quantity",
+          "startPos": 28,
+          "endPos": 28
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 22
+        },
+        {
+          "entity": "serving",
+          "startPos": 28,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "my lunch ? a simple tuna sandwitch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 20,
+          "endPos": 33
+        },
+        {
+          "entity": "serving",
+          "startPos": 20,
+          "endPos": 33
+        },
+        {
+          "entity": "meal",
+          "startPos": 3,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "i just had a slice of cake",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 22,
+          "endPos": 25
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 17
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "i ate some fries and steak",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 25
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 21,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "i got some pasta and a cup of coffee for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 30,
+          "endPos": 35
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "quantity",
+          "startPos": 21,
+          "endPos": 25
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 21,
+          "endPos": 35
+        },
+        {
+          "entity": "meal",
+          "startPos": 41,
+          "endPos": 45
+        }
+      ]
+    },
+    {
+      "text": "i ate some fried fish with rice and carrots",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 20
+        },
+        {
+          "entity": "food",
+          "startPos": 27,
+          "endPos": 30
+        },
+        {
+          "entity": "food",
+          "startPos": 36,
+          "endPos": 42
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 20
+        },
+        {
+          "entity": "serving",
+          "startPos": 27,
+          "endPos": 30
+        },
+        {
+          "entity": "serving",
+          "startPos": 36,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "i ate steak and some chicken",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 27
+        },
+        {
+          "entity": "quantity",
+          "startPos": 16,
+          "endPos": 19
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "serving",
+          "startPos": 16,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "i ate 120 apples",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 10,
+          "endPos": 15
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 8
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "i had 2 bowls of soup",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 17,
+          "endPos": 20
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 12
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "i had 3 pieces of cake",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 18,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 13
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "i just ate some turkey with apples for diner",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 21
+        },
+        {
+          "entity": "food",
+          "startPos": 28,
+          "endPos": 33
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 21
+        },
+        {
+          "entity": "serving",
+          "startPos": 28,
+          "endPos": 33
+        },
+        {
+          "entity": "meal",
+          "startPos": 39,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "i had 2 apples and some bread",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 13
+        },
+        {
+          "entity": "food",
+          "startPos": 24,
+          "endPos": 28
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "quantity",
+          "startPos": 19,
+          "endPos": 22
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 13
+        },
+        {
+          "entity": "serving",
+          "startPos": 19,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "i just had a bowl of soup with white bread",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 24
+        },
+        {
+          "entity": "food",
+          "startPos": 31,
+          "endPos": 41
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 16
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 24
+        },
+        {
+          "entity": "serving",
+          "startPos": 31,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "i ate 3 eggs with bacon",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "food",
+          "startPos": 18,
+          "endPos": 22
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 18,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "i had 214 apples",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 10,
+          "endPos": 15
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 8
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "i had 2 burgers and some raclette cheese",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 14
+        },
+        {
+          "entity": "food",
+          "startPos": 25,
+          "endPos": 39
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "quantity",
+          "startPos": 20,
+          "endPos": 23
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 20,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "i ate 2 eggs and bacon",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "food",
+          "startPos": 17,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 17,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "i ate bread for breakfast",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "meal",
+          "startPos": 16,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "i ate some fish and chips",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "food",
+          "startPos": 20,
+          "endPos": 24
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 20,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "i had 2 burgers and some raclette",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 14
+        },
+        {
+          "entity": "food",
+          "startPos": 25,
+          "endPos": 32
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "quantity",
+          "startPos": 20,
+          "endPos": 23
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 20,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "i just ate some turkey with apple for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 21
+        },
+        {
+          "entity": "food",
+          "startPos": 28,
+          "endPos": 32
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 21
+        },
+        {
+          "entity": "serving",
+          "startPos": 28,
+          "endPos": 32
+        },
+        {
+          "entity": "meal",
+          "startPos": 38,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "i ate 2 apples and a piece of pizza",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 13
+        },
+        {
+          "entity": "food",
+          "startPos": 30,
+          "endPos": 34
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "quantity",
+          "startPos": 19,
+          "endPos": 25
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 13
+        },
+        {
+          "entity": "serving",
+          "startPos": 19,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "i just ate some turkey with apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 21
+        },
+        {
+          "entity": "food",
+          "startPos": 28,
+          "endPos": 32
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 21
+        },
+        {
+          "entity": "serving",
+          "startPos": 28,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "i had 2 burgers, some raclette cheese and an apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 14
+        },
+        {
+          "entity": "food",
+          "startPos": 22,
+          "endPos": 36
+        },
+        {
+          "entity": "food",
+          "startPos": 45,
+          "endPos": 49
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "quantity",
+          "startPos": 17,
+          "endPos": 20
+        },
+        {
+          "entity": "quantity",
+          "startPos": 42,
+          "endPos": 43
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 17,
+          "endPos": 36
+        },
+        {
+          "entity": "serving",
+          "startPos": 42,
+          "endPos": 49
+        }
+      ]
+    },
+    {
+      "text": "i just had some cake and a beer",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 19
+        },
+        {
+          "entity": "food",
+          "startPos": 27,
+          "endPos": 30
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "quantity",
+          "startPos": 25,
+          "endPos": 25
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 19
+        },
+        {
+          "entity": "serving",
+          "startPos": 25,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "3 apples and a cup of coffee",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 2,
+          "endPos": 7
+        },
+        {
+          "entity": "food",
+          "startPos": 22,
+          "endPos": 27
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "quantity",
+          "startPos": 13,
+          "endPos": 17
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 7
+        },
+        {
+          "entity": "serving",
+          "startPos": 13,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "some eggs and potatoes",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 5,
+          "endPos": 8
+        },
+        {
+          "entity": "food",
+          "startPos": 14,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 8
+        },
+        {
+          "entity": "serving",
+          "startPos": 14,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "i just ate some chicken",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 22
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "i had 3 apples and a cup of coffee",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 13
+        },
+        {
+          "entity": "food",
+          "startPos": 28,
+          "endPos": 33
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "quantity",
+          "startPos": 19,
+          "endPos": 23
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 13
+        },
+        {
+          "entity": "serving",
+          "startPos": 19,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "just ate",
+      "intent": "new_meal",
+      "entities": []
+    },
+    {
+      "text": "i'd like to tell you about my lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "meal",
+          "startPos": 30,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "3 apples and eggs",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 2,
+          "endPos": 7
+        },
+        {
+          "entity": "food",
+          "startPos": 13,
+          "endPos": 16
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 7
+        },
+        {
+          "entity": "serving",
+          "startPos": 13,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "i ate a bowl of cereal and 2 bananas",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 21
+        },
+        {
+          "entity": "food",
+          "startPos": 29,
+          "endPos": 35
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 11
+        },
+        {
+          "entity": "quantity",
+          "startPos": 27,
+          "endPos": 27
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 21
+        },
+        {
+          "entity": "serving",
+          "startPos": 27,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "i just ate some eggs for snack",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 19
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 19
+        },
+        {
+          "entity": "meal",
+          "startPos": 25,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "i just had a bowl of agsbcd for lunch",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 26
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 16
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 26
+        },
+        {
+          "entity": "meal",
+          "startPos": 32,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "Ça fonctionne ! (enregistré à 9h36)",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "4 burgers and some rice",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 2,
+          "endPos": 8
+        },
+        {
+          "entity": "food",
+          "startPos": 19,
+          "endPos": 22
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "quantity",
+          "startPos": 14,
+          "endPos": 17
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 8
+        },
+        {
+          "entity": "serving",
+          "startPos": 14,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "i had 3 apples and a cup of coffe",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 13
+        },
+        {
+          "entity": "food",
+          "startPos": 28,
+          "endPos": 32
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "quantity",
+          "startPos": 19,
+          "endPos": 23
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 13
+        },
+        {
+          "entity": "serving",
+          "startPos": 19,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "i just ate pizza and a bag of chips",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "food",
+          "startPos": 30,
+          "endPos": 34
+        },
+        {
+          "entity": "quantity",
+          "startPos": 21,
+          "endPos": 25
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 21,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "i just ate pizza and chips",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 25
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 21,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "i just had an applepie",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 14,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 12
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "i just had a cup of tea for snack",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 20,
+          "endPos": 22
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 22
+        },
+        {
+          "entity": "meal",
+          "startPos": 28,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "i ate 21345 apples",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 12,
+          "endPos": 17
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "i just had some cookies",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 22
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "i ate steak and some chiken",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 26
+        },
+        {
+          "entity": "quantity",
+          "startPos": 16,
+          "endPos": 19
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "serving",
+          "startPos": 16,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "i just had a bowl of soup for diner",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 24
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 16
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 24
+        },
+        {
+          "entity": "meal",
+          "startPos": 30,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "i just had a bowl of soup for dinner",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 24
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 16
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 24
+        },
+        {
+          "entity": "meal",
+          "startPos": 30,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "a bowl of cereals and almonds",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 10,
+          "endPos": 16
+        },
+        {
+          "entity": "food",
+          "startPos": 22,
+          "endPos": 28
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 16
+        },
+        {
+          "entity": "serving",
+          "startPos": 22,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "beef and scallop",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "food",
+          "startPos": 9,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "serving",
+          "startPos": 9,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "i just ate some chicken and tomatoes",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 22
+        },
+        {
+          "entity": "food",
+          "startPos": 28,
+          "endPos": 35
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 22
+        },
+        {
+          "entity": "serving",
+          "startPos": 28,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "bowl of rice and apple",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "food",
+          "startPos": 17,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 17,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "cup of coffee and apple",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 7,
+          "endPos": 12
+        },
+        {
+          "entity": "food",
+          "startPos": 18,
+          "endPos": 22
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 12
+        },
+        {
+          "entity": "serving",
+          "startPos": 18,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "bread, jam and apple",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 4
+        },
+        {
+          "entity": "food",
+          "startPos": 7,
+          "endPos": 9
+        },
+        {
+          "entity": "food",
+          "startPos": 15,
+          "endPos": 19
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 4
+        },
+        {
+          "entity": "serving",
+          "startPos": 7,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 15,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "i had 1420 bananas and apples",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 17
+        },
+        {
+          "entity": "food",
+          "startPos": 23,
+          "endPos": 28
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 17
+        },
+        {
+          "entity": "serving",
+          "startPos": 23,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "100g",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "1417 bananas and apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 5,
+          "endPos": 11
+        },
+        {
+          "entity": "food",
+          "startPos": 17,
+          "endPos": 21
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 11
+        },
+        {
+          "entity": "serving",
+          "startPos": 17,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "i had 58 bananas and apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 9,
+          "endPos": 15
+        },
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 25
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 7
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 21,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "a bowl of rice and apple",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 10,
+          "endPos": 13
+        },
+        {
+          "entity": "food",
+          "startPos": 19,
+          "endPos": 23
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "serving",
+          "startPos": 19,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "i had 2 bananas and apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 8,
+          "endPos": 14
+        },
+        {
+          "entity": "food",
+          "startPos": 20,
+          "endPos": 24
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 14
+        },
+        {
+          "entity": "serving",
+          "startPos": 20,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "beef and scallops",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "food",
+          "startPos": 9,
+          "endPos": 16
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "serving",
+          "startPos": 9,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "cereal and almond",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 16
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "a bowl of rice and tomatoes",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 10,
+          "endPos": 13
+        },
+        {
+          "entity": "food",
+          "startPos": 19,
+          "endPos": 26
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "serving",
+          "startPos": 19,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "14 bananas and apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 3,
+          "endPos": 9
+        },
+        {
+          "entity": "food",
+          "startPos": 15,
+          "endPos": 19
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 15,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "cereals and almonds",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 0,
+          "endPos": 6
+        },
+        {
+          "entity": "food",
+          "startPos": 12,
+          "endPos": 18
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 6
+        },
+        {
+          "entity": "serving",
+          "startPos": 12,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "i just ate some nuts and 2 apples",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 19
+        },
+        {
+          "entity": "food",
+          "startPos": 27,
+          "endPos": 32
+        },
+        {
+          "entity": "quantity",
+          "startPos": 11,
+          "endPos": 14
+        },
+        {
+          "entity": "quantity",
+          "startPos": 25,
+          "endPos": 25
+        },
+        {
+          "entity": "serving",
+          "startPos": 11,
+          "endPos": 19
+        },
+        {
+          "entity": "serving",
+          "startPos": 25,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "i had 13 bananas and apple",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 9,
+          "endPos": 15
+        },
+        {
+          "entity": "food",
+          "startPos": 21,
+          "endPos": 25
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 7
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 21,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "some apples and beef",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 5,
+          "endPos": 10
+        },
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 19
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "serving",
+          "startPos": 16,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "how does this works ?",
+      "intent": "usage",
+      "entities": []
+    },
+    {
+      "text": "what are my reminder ?",
+      "intent": "reminders",
+      "entities": []
+    },
+    {
+      "text": "it was eggplants with rice",
+      "intent": "usage",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 7,
+          "endPos": 15
+        },
+        {
+          "entity": "food",
+          "startPos": 22,
+          "endPos": 25
+        },
+        {
+          "entity": "serving",
+          "startPos": 7,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 22,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "a bowl of banana",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 10,
+          "endPos": 15
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "i ate some steak with fries",
+      "intent": "new_meal",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "food",
+          "startPos": 22,
+          "endPos": 26
+        },
+        {
+          "entity": "quantity",
+          "startPos": 6,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 6,
+          "endPos": 15
+        },
+        {
+          "entity": "serving",
+          "startPos": 22,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "some steak with fries",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "food",
+          "startPos": 5,
+          "endPos": 9
+        },
+        {
+          "entity": "food",
+          "startPos": 16,
+          "endPos": 20
+        },
+        {
+          "entity": "quantity",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "serving",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "serving",
+          "startPos": 16,
+          "endPos": 20
+        }
+      ]
+    }
+  ]
+}

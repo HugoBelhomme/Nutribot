@@ -1,10 +1,11 @@
-  /* This dialog is responsible for handling the parameters
+/* This dialog is responsible for handling the parameters
  * and credits of the bot */
 
 var builder = require('botbuilder');
+var config = require('./config.js');
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/testsMongo";
+var url = config.MONGOURL;
 
 var db;
 MongoClient.connect(url, null, function (err, bdd) {
@@ -31,7 +32,6 @@ lib.dialog('showParams', [
           session.beginDialog('showFunnyStats');
           break;
         case 1:
-          session.userData.canBeInterrupted = false;
           session.beginDialog('deleteData');
           break;
         case 2:
@@ -78,7 +78,6 @@ lib.dialog('deleteData',[
                           { listStyle: builder.ListStyle.button });
   },
   function (session, results) {
-    session.userData.canBeInterrupted = true;
     switch (results.response.index) {
       case 0:
         session.endDialog("Ok, I deleted everything I had on you (THATS A LIE WRITTEN BY THE DEV, DON'T TRUST HIM)");

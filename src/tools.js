@@ -144,7 +144,6 @@ processMealsData = function (session, foods, nuts, table) {
     msg += "- " + nuts[i] + " : " + res[nuts[i]] + " " + nutDict[nuts[i]].unit + "\n\n";
   }
   session.send(msg);
-  session.userData.canBeInterrupted = true;
   session.endDialog();
 }
 

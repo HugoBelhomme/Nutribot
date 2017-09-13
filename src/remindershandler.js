@@ -3,11 +3,12 @@
 var builder = require('botbuilder');
 var main = require('./main.js');
 var BSON = require('bson');
+var config = require('./config.js')
 
 var lib = new builder.Library('reminders');
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/testsMongo";
+var url = config.MONGURL;
 var db;
 MongoClient.connect(url, null, function (err, bdd) {
   if (err) {
@@ -17,7 +18,7 @@ MongoClient.connect(url, null, function (err, bdd) {
   db = bdd;
 });
 
-var LUIS_URL = "YourURLGoesHere"
+var LUIS_URL = config.LUISURL;
 var recognizer = new builder.LuisRecognizer(LUIS_URL);
 
 
@@ -39,7 +40,6 @@ lib.dialog('/', [
           session.replaceDialog('showReminders');
           break;
         case 1:
-          session.userData.canBeInterrupted = false;
           session.replaceDialog('createReminder');
           break;
         default:
@@ -111,7 +111,6 @@ lib.dialog('createReminder', [
   },
   function (session, results) {
     session.dialogData.reminder.repeat = results.response;
-    session.userData.canBeInterrupted = true;
     addReminder(session.dialogData.reminder, session.userData);
     session.endDialog();
   }

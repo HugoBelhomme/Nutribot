@@ -2,9 +2,10 @@
 
 var builder = require('botbuilder');
 var w2n = require ('words-to-numbers');
+var config = require('./config.js')
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/testsMongo";
+var url = config.MONGOURL;
 
 var lib = new builder.Library('form');
 
@@ -46,7 +47,6 @@ lib.dialog('askForConsent', [
   function (session, results) {
     // If the user agrees
     if (results.response && results.response.index == 0) {
-      session.userData.canBeInterrupted = false;
       session.replaceDialog('form:form');
     } else {
       session.userData.lastForm = new Date();
@@ -81,7 +81,6 @@ lib.dialog('form', [
         var msgThx = "Thank you, I'll keep this in mind and "
                     +"use it to better help you";
         session.send(msgThx);
-        session.userData.canBeInterrupted = true;
         // Return completed form
         session.userData.form = session.dialogData.form;
         processForm(session.dialogData.form, session.userData.userId);

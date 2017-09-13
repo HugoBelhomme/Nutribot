@@ -3,12 +3,13 @@
  * nutritional intake of a whole day */
 
 var builder = require('botbuilder');
-var tools = require('./tools.js')
 var fs = require('fs');
 var pluralize = require('pluralize');
+var config = require('./config.js');
+var tools = require('./tools.js')
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/testsMongo";
+var url = config.MONGOURL;
 
 var db;
 MongoClient.connect(url, null, function (err, bdd) {
@@ -36,7 +37,6 @@ lib.dialog('showRecap', [
   },
   function (session, results, next) {
       if (results.response) {
-        session.userData.canBeInterrupted = false;
       switch (results.response.index) {
         case 0:
           session.send("Oh so you forgot what you ate ...")
@@ -81,7 +81,6 @@ lib.dialog('askForDisplay', [
     if (results.response) {
       session.replaceDialog('displayMeals', {meals: session.dialogData.res, index: 0});
     } else {
-      session.userData.canBeInterrupted = true;
       session.endDialog();
     }
   }
@@ -104,7 +103,6 @@ lib.dialog('displayMeals', [
 
     // We just send a msg for 1 day, let's see if we got other days to display :
     if (args.index >= args.meals.length - 1) {
-      session.userData.canBeInterrupted = true;
       session.endDialog();
     } else {
       session.replaceDialog('displayMeals', {meals: args.meals, index: args.index + 1});
@@ -133,7 +131,6 @@ lib.dialog('getAnalysis', [
       i++;
     }
     if (i === n) { // If we went too far it means we did not find the day
-      session.userData.canBeInterrupted = true;
       session.endDialog("Sorry I couldn't find any meal at that date")
     } else {
       var mealsFound = session.dialogData.days[i];

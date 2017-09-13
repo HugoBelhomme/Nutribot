@@ -5,5 +5,7 @@ L'objectif du projet était de concevoir un chatbot nutritionnel, qui soit capab
 
 # Contenu du projet
 Le code est disponible dans le dossier `src`, qui contient également des instructions de lancement.
+
 Dans le dossier `doc` sont tous les documents que j'ai été ammené à produire dans le cadre de mon stage et des deux présentations intermédiaires. Plus d'informations sur ma démarche et mon travail sont disponibles dans les documents de ce dossier.
+
 Le dossier `assets` contient les quelques graphiques et documents utilisés par le programme.

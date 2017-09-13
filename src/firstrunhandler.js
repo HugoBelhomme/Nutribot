@@ -14,7 +14,6 @@ lib.dialog('/', [
     session.send("I work by analysing your meals so I will eventualy need you "+
                  "to tell me what you eat.");
     session.userData.address = session.message.address;
-    session.userData.canBeInterrupted = true;
     session.userData.isFirstRun = false;
   }
 ]);

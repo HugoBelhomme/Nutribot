@@ -4,10 +4,11 @@ var restify = require('restify');
 var builder = require('botbuilder');
 var uuid = require('uuid/v4');
 var CronJob = require('cron').CronJob;
-var remind = require('./remindershandler.js')
+var remind = require('./remindershandler.js');
+var config = require('./config.js');
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/testsMongo";
+var url = config.MONGOURL;
 
 
 // Connection to the database
@@ -20,7 +21,7 @@ MongoClient.connect(url, null, function (err, bdd) {
   db = bdd;
 });
 
-var LUIS_URL = "YourURLGoesHere"
+var LUIS_URL = config.LUISURL
 var recognizer = new builder.LuisRecognizer(LUIS_URL);
 
 // Setup Restify Server
@@ -88,8 +89,6 @@ var thresholds = {
 // listening for incoming messages
 bot.use({
   botbuilder: function(session, next) {
-
-    session.userData.canBeInterrupted = true;
 
     // If this user has no ID, let's give him one
     newUserId(session);
